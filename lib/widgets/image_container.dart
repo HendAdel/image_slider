@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AppImageContainer extends StatelessWidget {
   final String appImage;
 
-  const AppImageContainer(String s, {required this.appImage, super.key});
+  const AppImageContainer({required this.appImage, super.key});
 
   @override
   Widget build(BuildContext context) {
