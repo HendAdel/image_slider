@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/widgets.dart';
+import 'package:image_slider/widgets/image_container.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,16 +16,13 @@ class _HomePageState extends State<HomePage> {
         drawer: Container(),
         appBar: AppBar(),
         body: ListView(children: [
-CarouselSlider(items: [Container(margin: EdgeInsets.all(6.0),
-decoration: BoxDecoration(
-  borderRadius: BorderRadius.circular(8.0),
-  image: DecorationImage(
-    image:AssetImage('assets/vP.jpg'),
-    fit: BoxFit.cover,
-  )
-),
-),
-], options: CarouselOptions(height: 180.0,
+CarouselSlider(items:  const [
+  AppImageContainer(appImage:'assets/vP.jpg'),
+  AppImageContainer(appImage:'assets/fP.jpg'),
+  AppImageContainer(appImage: 'assets/images.jpg'),
+
+], 
+options: CarouselOptions(height: 180.0,
 enlargeCenterPage: true,
 autoPlay: true,
 aspectRatio: 16/9,
